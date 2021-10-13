@@ -33,19 +33,33 @@ h3{
 
 .top-header{
     padding: 5%;
-
 }
 
+.top-header h3{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 15px
+}
 
+.top-header-resp{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .logo{
-    width: 200px;
+    width: 100%;  
     padding: 10px;
+}
+
+.img-logo{
+    width: 50%;   
 }
 
 
 header{
     background-color: #EAC926;
-    padding:  20px;
+    padding-bottom:  20px;
 }
 
 .compra-cuotas{
@@ -66,23 +80,34 @@ text-decoration: none;
 color: #000;
 }
 
+
 .buscar-producto{
-    width: 50%;
-    border:none;
+    display: flex;
+    width: 100%;
 }
 
-/*
-input{
-    border: none;
-    width: 50%;
-}*/
+.buscar-producto input{
+    border:none;
+    width:50%;
+    font-size: 18px; 
+}
 
-.buscar {
+
+.buscar-producto boton-buscar {
+    position: absolute;
+    width: 55px;
+    top:0px;
+    right: 0px;
+    height: 40px;
     border: none;
     background-color: #ffffff;
     cursor: pointer;
+    text-align: center;
 }
 
+.boton-buscar i{
+    font-size: 17px;
+}
 .fas{
     font-size:15px;
     }
@@ -238,12 +263,12 @@ footer article{
 
 
 @media (min-width:361px) {
-    
+    /*
     .top-header {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-    }
+    }*/
     
     .descripciones {
         display:block;
@@ -289,28 +314,37 @@ footer article{
         .top-header {
             display: flex;
             justify-content: space-between;
-            border:dashed 1px red
         }
 
+         .top-header-resp{
+             width: 140%;
+
+        }
+
+        .top-header h3{
+            padding-top: 12px;
+            font-size: 18px;
+        }
+
+        .top-header-resp h3{
+            font-size: 20px;
+        }
+
+        .buscar-producto input{
+            border:none;
+            width:100%   
+        }
 
         .compra-cuotas{
             width:300px;
             text-align:right
         }
 
-        .descripciones {
-            display:block;
-        }
-        .article{
-            box-shadow : 0px 0px 10px rgb ( 100 , 100 , 100 );
-        }
-        
-
         nav{
             display: flex;
             justify-content: space-between;
         }
-    
+
         ul {
             display: flex;
             justify-content: space-around;
@@ -325,9 +359,61 @@ footer article{
             color: #0044AA;
         }
 
-
         .burger-menu{
             display: none;
+        }
+
+/*Articulos*/
+
+        .descripciones {
+            display:block;
+        }
+        .article:hover{
+            box-shadow : 0px 0px 10px rgb ( 100 , 100 , 100 );
+        }
+
+        .productos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+         article {
+            width: 40%; 
+        } 
+    }
+
+
+    @media (min-width: 1024px){
+        /*Header*/
+        .top-header-resp {
+            width: 183%;
+        }
+    
+        top-header h3 {
+            margin-top: 15px;
+            font-size: 19px;
+            margin-left: 35px;
+        }
+    
+        nav {
+            padding: 0px 16px;
+        }
+    
+        ul li a {
+            font-size: 17px;
+            margin-right: 9px;
+        }
+    
+        ul li a:hover {
+            transition: all 300ms;
+            text-decoration: underline;
+            color: #043988;
+        }
+    
+        /*Articulos*/
+        main {
+            padding: 30px 0;
         }
 
 
@@ -337,8 +423,41 @@ footer article{
             justify-content: space-between;
         }
         
-
          article {
-            width: 22%;
+            width: 20%; 
         } 
+    
+        article div.contenedor1 .descripciones {
+            display: none;
+        }
+    
+        article div.contenedor1:hover .descripciones{
+            transition: all 500ms;
+            display: block;     
+        }
+    
+        article div.contenedor1 .fa-truck {
+            transition: all 300ms;
+            
+        }
+        article div.contenedor1:hover .fa-truck {
+            transition: all 300ms;
+            transform: rotate(-90deg);
+        }
+    
+    
+        /* ESTILOS FOOTER RESPONSIVE */
+    
+        footer {
+            display: flex;
+            justify-content: space-around;
+        }
+    
+        footer article {
+            width: 27%;
+        }
+    
+        footer article i:hover {
+            color: #5297ff;
+        }
     }
