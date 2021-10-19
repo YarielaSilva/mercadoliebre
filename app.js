@@ -18,23 +18,12 @@ app.get('/', (req, res) =>{
     res.sendFile(path.resolve(__dirname,'./views/home.html'))
 })  
 
-/*CORRER LA RUTA DEL REGISTER*/
-/*
-app.listen (4000, () => {
-    console.log ("Servidor corriendo en el puerto 4000")
-});
 
-app.get('/', (req, res) =>{
+app.get('/views/register.html', (req, res) =>{
     res.sendFile(path.resolve(__dirname,'./views/register.html'))
-})   */
+}) 
 
-/*correr la ruta del login*/
-/*
-app.listen (5000, () => {
-    console.log ("Servidor corriendo en el puerto 5000")
-});
 
-app.get('/', (req, res) =>{
+app.get('/views/login.html', (req, res) =>{
     res.sendFile(path.resolve(__dirname,'./views/login.html'))
 })  
-*/

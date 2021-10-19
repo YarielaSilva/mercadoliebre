@@ -1,17 +1,30 @@
+
 h1{
     text-align: center;
     font-weight: bold;
-    background-color:darkkhaki;
+    background-color:rgb(26, 9, 121);
+    color:white;
 }
 
 label{
-    font-size: 1.5em;
+    font-size: 1em;
 }
 .main-registro{
     margin-top: 50px;
     width: 80%;
-    background-color: rgb(168, 208, 209);
-    border: dashed 3px red;
+    background-color: rgba(229, 229, 233, 0.918);
+    border: solid 3px rgb(43, 17, 114);
+}
+
+
+div.form {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    color: #666;
 }
 
 
@@ -23,6 +36,7 @@ label{
 
 .control-formulario{
     margin-bottom: 15px;
+    padding: 5px;
 }
 
 .control-formulario label{
@@ -30,9 +44,10 @@ label{
     
 }
 
+
 .checkbox{
     margin-bottom: 15px;
-    
+    padding: 5px;
 }
 
 .input-textos{
@@ -44,14 +59,11 @@ label{
     display: flex;
     margin:auto;
     padding: 15px;
-    justify-content:center
-
-
+    justify-content:center;
 }
 
 .button-borrar{
     display: flex;
     justify-content:center;
-    
 
 }
